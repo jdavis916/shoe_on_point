@@ -1,7 +1,7 @@
-#Simple Nodejs Template
+#Shoes On Point
 -----------------------
 
-Starter Project Frame
+Example Project Based on Sneaker 
 
 #Techs Using
 -------------

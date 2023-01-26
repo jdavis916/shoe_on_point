@@ -9,7 +9,7 @@ let _handlebars = require('handlebars');
 let exphbs = require('express-handlebars');
 let {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 //check test
-//import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 //import cors from 'cors';
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
@@ -18,13 +18,20 @@ var app = express();
 //database name
 // var dbName = 'copFinal';
 // var dbConnection = mongoose.connection;
-
+var pw = encodeURIComponent('pw#321');
+var dbName = 'dbShoesOnPoint';
 //mongo connection
-/*mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/' + dbName, {
-	useNewUrlParser: true, 
-	useUnifiedTopology: true
-});*/
+mongoose.Promise = global.Promise;
+try{
+	mongoose.connect(`mongodb+srv://srrAdmin:${pw}@cluster0.b1dfu.mongodb.net/${dbName}?authSource=admin&replicaSet=atlas-gg11vm-shard-0&readPreference=primary&ssl=true`, {
+		useNewUrlParser: true, 
+		useUnifiedTopology: true
+	});
+	console.log('db connected');
+}catch(e){
+	console.log('db cant connect');
+}
+
 
 //vhost
 

@@ -5,9 +5,9 @@ const mongoose = require('mongoose').set('debug', true);
 /* GET home page */
 router.get('/', function(req, res) {
   res.render('index', { 
-  	title: 'Simple Node Template',
-  	msg: 'This sample template should help get you on your way.',
-  	pageMainClass: 'pgHome'
+  	title: 'Shoe On Point',
+  	msg: 'This will be an awesome sneaker site',
+  	pageMainClass: 'pgHome',
   });
 })
 .get('/shop', function(req, res) {

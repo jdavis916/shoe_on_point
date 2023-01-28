@@ -5,36 +5,41 @@ const mongoose = require('mongoose').set('debug', true);
 /* GET home page */
 router.get('/', function(req, res) {
   res.render('index', { 
-  	title: 'Simple Node Template',
-  	msg: 'This sample template should help get you on your way.',
-  	pageMainClass: 'pgHome'
+  	title: 'Shoe On Point',
+  	msg: 'This will be an awesome sneaker site',
+		bodyClass: 'bdHome',
+  	pageMainClass: 'pgHome',
   });
 })
 .get('/shop', function(req, res) {
   res.render('shop', { 
-  	title: 'Simple Node Template',
-  	msg: 'This sample template should help get you on your way.',
+  	title: 'Shop',
+  	msg: 'This is the shop page',
+		bodyClass: 'bdShop',
   	pageMainClass: 'pgShop'
   });
 })
 .get('/checkout', function(req, res) {
   res.render('checkout', { 
-  	title: 'Simple Node Template',
-  	msg: 'This sample template should help get you on your way.',
+  	title: 'Checkout',
+  	msg: 'This is the checkout page',
+		bodyClass: 'bdCheckout',
   	pageMainClass: 'pgCheckout'
   });
 })
 .get('/search', function(req, res) {
   res.render('search', { 
-  	title: 'Simple Node Template',
-  	msg: 'This sample template should help get you on your way.',
+  	title: 'Search',
+  	msg: 'This is the search page',
+		bodyClass: 'bdSearch',
   	pageMainClass: 'pgSearch'
   });
 })
 .get('/contact', function(req, res) {
   res.render('contact', { 
-  	title: 'Simple Node Template',
-  	msg: 'This sample template should help get you on your way.',
+  	title: 'Contact',
+  	msg: 'This is the contact page',
+		bodyClass: 'bdContact',
   	pageMainClass: 'pgContact'
   });
 });

@@ -12,13 +12,27 @@
     <!--Custom CSS-->
     <link rel='stylesheet' href='/css/style.css'/>
   </head>
-  <body>
+  <body class="{{bodyClass}}">
     <div>
       <header class="container-fluid">
         <section class="row">
           <div class="col-12">
-            <nav>
-              
+            <nav class="row navbar navbar-expand-sm navbar-dark bg-dark mainNav">
+              <div class="container-fluid">
+                <!-- Links -->
+                <a class="navbar-brand" href="/">(Shoe On Point Logo)</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavLinks" aria-controls="mainNavLinks" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavLinks">
+                  <div class="navbar-nav">
+                    <a href="/shop" class="nav-link" aria-current="page" href="#">Shop</a>
+                    <a href="/search" class="nav-link">Search</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                  </div>
+                </div>
+              </div>
             </nav>              
           </div>
         </section>          
